@@ -25,7 +25,7 @@ SECRET_KEY = '_h%u7_hkgmu5be-x4!sz@$1r5+emag+af6p_sj7$_mv73ph2m3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://ha-stories-website.herokuapp.com/', '127.0.0.1', 'localhost']
 
 
 # Application definition
