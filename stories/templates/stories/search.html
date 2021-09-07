@@ -1,0 +1,43 @@
+{% extends 'stories/base.html' %}
+
+{% block title %}Search{% endblock title %}
+
+{% block content %}
+
+<div class=" container animate-box" data-animate-effect="fadeInLeft">
+    {% if numbers %}
+        <div>
+            <div class="fh5co_heading fh5co_heading_border_bottom py-2 mb-4">Stories</div>
+            
+            <h5>Found {{numbers}} story{{numbers|pluralize}}</h5>
+        </div>
+        {% if stories %}
+            {% for story in stories %}
+                <div class="row pb-4">
+                    <div class="col-md-3">
+                        <div class="fh5co_hover_news_img">
+                            <div class="fh5co_news_img"><img src="{{ story.image.url }}" alt={{ story.name }} /></div>
+                        </div>
+                        <div></div>
+                    </div>
+                    <div class="col-md-9">
+                        <a href="{% url 'stories:story.html' story.pk %}" class="fh5co_magna py-2"> {{ story.name }} </a>
+                        <a href="{% url 'stories:story.html' story.pk %}" class="fh5co_mini_time py-3" >
+                            {{ story.author }} - {{ story.public_day }} 
+                        </a>
+                        <div class="fh5co_consectetur"> {{ story.content|truncatewords:60|safe }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% else %}
+        <div class="my-4"></div>
+        <h5 class="text-center">Not found any story or content match this search.</h5>
+
+    {% endif %}
+
+
+</div>
+
+{% endblock content %}
