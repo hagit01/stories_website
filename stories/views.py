@@ -244,7 +244,9 @@ def subscribe(request):
 
         return render(request, 'stories/base.html', {'today': now, 'username': username, 'result': result})
 
-    return render(request, 'stories/base.html', {'today': now, 'username': username})
+    return render(request, 'stories/base.html', {'today': now, 'username': username,
+                                                 'most_viewed_stories': most_viewed_stories,
+                                                 'newest': newest, 'newest_4': newest_4})
 
 
 def read_feeds(request):
@@ -255,6 +257,7 @@ def read_feeds(request):
     now = datetime.datetime.now()
     username = request.session.get('last_visit', False)
     return render(request, 'stories/feeds.html', {'today': now, 'username': username, 'feeds': entry,
+                                                  'most_viewed_stories': most_viewed_stories,
                                                   'newest': newest, 'newest_4': newest_4})
 
 
