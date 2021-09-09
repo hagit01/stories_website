@@ -3,41 +3,41 @@
 
 {% block title %}Stories for Children{% endblock title %}
 
+{% block nav %}
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'stories:index'%}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'stories:category.html' 1 %}">Young Children <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'stories:category.html' 2 %}">Older Children <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'stories:story.html' newest.pk %}">Story <span class="sr-only">(current)</span></a>
+        </li>                    
+        <li class="nav-item active">
+            <a class="nav-link" href="{% url 'stories:contact.html'%}">Contact <span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+</div>
+{% endblock nav %}
+
+
 
 {% block content%}
 
 <div class="container-fluid contact_us_bg_img">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <a href="{% url 'stories:contact.html'%}" class="fh5co_con"> Contact </a>
-            </div>
-            <div class="col-md-6">
-                <div class="my-5"></div>
-                <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
-                    <div class="text-center d-inline-block">
-                        <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-linkedin"></i></div></a>
-                    </div>
-                    <div class="text-center d-inline-block">
-                        <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-google-plus"></i></div></a>
-                    </div>
-                    <div class="text-center d-inline-block">
-                        <a href="https://twitter.com/fh5co" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-twitter"></i></div></a>
-                    </div>
-                    <div class="text-center d-inline-block">
-                        <a href="https://fb.com/fh5co" target="_blank" class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-facebook"></i></div></a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="row">
-
-
+            <a href="{% url 'stories:index'%}" class="fh5co_con_123"><i class="fa fa-home"></i></a>
+            <a href="{% url 'stories:contact.html'%}" class="fh5co_con pt-2"> Contact Us </a>
         </div>
     </div>
 </div>
-<div class="container-fluid fh5co_fh5co_bg_contcat">
+<div class="container-fluid  fh5co_fh5co_bg_contcat">
     <div class="container">
         <div class="row py-4">
             <div class="col-md-4 py-3">
@@ -52,7 +52,6 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
-
             <div class="col-md-4 py-3">
                 <div class="row fh5co_contact_us_no_icon_difh5co_hover">
                     <div class="col-3 fh5co_contact_us_no_icon_difh5co_hover_1">
@@ -77,7 +76,7 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
-
+            <div class="clearfix"></div>
         </div>
     </div>
 </div>
@@ -109,7 +108,7 @@
                     {% comment %} {{ form.as_ul }} {% endcomment %}
                     {% comment %} {{ form.as_table }} {% endcomment %}
                     {% comment %} {{ form.as_p }} {% endcomment %}
-                    <div class="col-12 py-3 text-center"><input type="submit" class="btn contact_btn" value="Send Message"></div>
+                    <div class="col-12 py-3 text-center"><input type="submit" class="input-gr" value="Send Message"></div>
                 </form>
             </div>
 {#            <div class="col-12 col-md-6 align-self-center">#}

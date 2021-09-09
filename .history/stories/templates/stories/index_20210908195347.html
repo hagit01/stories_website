@@ -3,6 +3,34 @@
 
 {% block title %}Stories for Children{% endblock title %}
 
+{% block nav %}
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="{% url 'stories:index'%}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="{% url 'stories:category.html' 1 %}">Young Children <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="{% url 'stories:category.html' 2 %}">Older Children <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="{% url 'stories:story.html' newest.pk %}">Story <span class="sr-only">(current)</span></a>
+        </li>                    
+        <li class="nav-item ">
+            <a class="nav-link" href="{% url 'stories:contact.html'%}">Contact <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="{% url 'stories:register.html'%}">Registration <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" ></a>
+        </li>
+    </ul>
+</div>
+{% endblock nav %}
+
 
 {% block content %}
 

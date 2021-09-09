@@ -26,37 +26,40 @@ now = datetime.datetime.now()
 today = date.today()
 d1 = today.strftime("%b. %d,%Y")
 
-story_list = Story.objects.order_by("-id")
-newest = story_list[0]
-next_4_newest = story_list[1:5]
-newest_4 = story_list[0:4]
-most_viewed_stories = story_list[3:6]
-
 
 def index(request):
-    value = 1
-    if request.COOKIES.get('visits'):
-        value = int(request.COOKIES.get('visits'))
+        value = 1
+        if request.COOKIES.get('visits'):
+            value = int(request.COOKIES.get('visits'))
 
-    last_visit = request.session.get('last_visit', now.strftime('%B %d, %Y %I:%M %p'))
-    request.session['last_visit'] = now.strftime('%B %d, %Y %I:%M %p')
+        last_visit = request.session.get('last_visit', now.strftime('%B %d, %Y %I:%M %p'))
+        request.session['last_visit'] = now.strftime('%B %d, %Y %I:%M %p')
 
-    young_children = Story.objects.filter(category=1).order_by("-id")
-    older_children = Story.objects.filter(category=2).order_by("-id")
+        story_list = Story.objects.order_by("-id")
+        newest = story_list[0]
+        next_4_newest = story_list[1:5]
+        newest_stories = story_list[0:4]
+        most_viewed_stories = story_list[3:6]
 
-    context = {'today': now, 'd1': d1, 'newest': newest, 'next_4_newest': next_4_newest,
-                'newest_4': newest_4, 'young': young_children,
-                'older': older_children, 'most_viewed_stories': most_viewed_stories,
-                'visits': value, 'last_visit': last_visit}
-    response = render(request, "stories/index.html", context)
+        young_children = Story.objects.filter(category=1).order_by("-id")
+        older_children = Story.objects.filter(category=2).order_by("-id")
 
-    if value != 1:
-        response.set_cookie('visits', value+1)
+        context = {'today': now, 'd1': d1, 'newest': newest, 'next_4_newest': next_4_newest,
+                   'newest_stories': newest_stories, 'young': young_children,
+                   'older': older_children, 'most_viewed_stories': most_viewed_stories,
+                   'visits': value, 'last_visit': last_visit}
+        response = render(request, "stories/index.html", context)
+
+        if value != 1:
+            response.set_cookie('visits', value+1)
+        else:
+            response.set_cookie('visits', value)
+
+        # response.delete_cookie('visits')
+        return response
     else:
-        response.set_cookie('visits', value)
+        return redirect('/login.html')
 
-    return response
-    
 
 def category(request, pk):
     story_list = Story.objects.filter(category=pk).order_by("-id")
@@ -75,17 +78,22 @@ def category(request, pk):
     except EmptyPage:
         stories = paginator.page(paginator.num_pages)
 
+    newest = Story.objects.filter(category=pk).order_by("-id")[0]
+    newest_stories = Story.objects.order_by("-id")[0:4]
+    most_viewed_stories = Story.objects.order_by("-id")[3:6]
     context = {'today': now, 'stories': stories, 'newest': newest, 'pk': pk,
-               'newest_4': newest_4, 'most_viewed_stories': most_viewed_stories}
+               'newest_stories': newest_stories, 'most_viewed_stories': most_viewed_stories}
     return render(request, "stories/category.html", context)
 
 
 def story(request, pk):
     story_select = Story.objects.get(pk=pk)
     stories = Story.objects.filter(category=story_select.category).order_by("-id")
-
+    newest = Story.objects.order_by("-id")[0]
+    newest_stories = Story.objects.order_by("-id")[0:4]
+    most_viewed_stories = Story.objects.order_by("-id")[3:6]
     context = {'today': now, 'story': story_select, 'stories': stories, 'newest': newest,
-               'newest_4': newest_4, 'most_viewed_stories': most_viewed_stories}
+               'newest_stories': newest_stories, 'most_viewed_stories': most_viewed_stories}
     return render(request, "stories/story.html", context)
 
 
@@ -100,7 +108,7 @@ def story(request, pk):
 
 def search(request):
     global search_str
-    newest = Story.objects.order_by("-id")[0]
+    latest = Story.objects.order_by("-id")[0]
     newest_4 = Story.objects.order_by("-id")[0:4]
     stories = []
     if request.method == 'GET':
@@ -114,8 +122,7 @@ def search(request):
     for story in stories:
         story.content = re.sub('<[^<]*?>', '', story.content)
     numbers = len(stories)
-    context = {'today': now, 'newest': newest, 'stories': stories, 'newest_4': newest_4,
-               'most_viewed_stories': most_viewed_stories, 'numbers': numbers, 'search_str': search_str}
+    context = {'today': now, 'latest': latest, 'stories': stories, 'newest_4': newest_4, 'numbers': numbers, 'search_str': search_str}
     return render(request, 'stories/search.html', context)
 
 
@@ -140,7 +147,7 @@ def contact(request):
     else:
         form = FormContact()
 
-    context = {'today': now, 'newest': newest, 'newest_4': newest_4, 'most_viewed_stories': most_viewed_stories,
+    context = {'today': now, 'newest': newest, 'newest_stories': newest_stories, 'most_viewed_stories': most_viewed_stories,
                'form': form, 'result': result}
 
     return render(request, 'stories/contact.html', context)
@@ -168,7 +175,7 @@ def register(request):
     else:
         form_user = UserForm()
         form_por = UserProfileInfoForm()
-    context = {'user_form': form_user, 'profile_form': form_por, 'newest': newest, 'newest_4': newest_4, 'registered': registered, 'today': now}
+    context = {'user_form': form_user, 'profile_form': form_por, 'newest': newest, 'registered': registered, 'today': now}
     return render(request, 'stories/register.html', context)
 
 
@@ -184,7 +191,8 @@ def user_login(request):
             result = "Hello " + username
             request.session['username'] = username
             username = request.session.get('username', 0)
-            return redirect('/')
+            return render(request, 'stories/login.html', {'login_result': result,
+                                                          'username': username, 'today': now, 'newest': newest})
         else:
             print("You can't login.")
             print("Username: {} and password: {}".format(username, password))
@@ -201,8 +209,8 @@ def user_logout(request):
     logout(request)
     result = "You're logged out. You can login again."
     context = {'logout_result': result, 'today': now, 'newest': newest}
-    return redirect('/')
     return render(request, 'stories/login.html', context)
+    pass
 
 
 # @login_required
@@ -248,14 +256,12 @@ def subscribe(request):
 
 
 def read_feeds(request):
-    newest = Story.objects.order_by("-id")[0]
     news_feed = feedparser.parse('http://feeds.feedburner.com/bedtimeshortstories/LYCF')
     entry = news_feed.entries
 
     now = datetime.datetime.now()
     username = request.session.get('last_visit', False)
-    return render(request, 'stories/feeds.html', {'today': now, 'username': username, 'feeds': entry,
-                                                  'newest': newest, 'newest_4': newest_4})
+    return render(request, 'stories/feeds.html', {'today': now, 'username': username, 'feeds': entry})
 
 
 def stories_service(request):
