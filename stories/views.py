@@ -222,7 +222,6 @@ def user_logout(request):
 #     return render(request, 'stories/base.html', {'today': now, 'username': username})
 
 
-@login_required
 def subscribe(request):
     now = datetime.datetime.now()
     last_visit = request.session.get('last_visit', False)
