@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="97580101-9fe2-4996-ad16-ab3b647feccf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stories/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="255" column="55" lean-forward="true" selection-start-line="255" selection-start-column="55" selection-end-line="255" selection-end-column="55" />
+            <state relative-caret-position="-299">
+              <caret line="223" selection-start-line="223" selection-end-line="223" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -187,11 +188,11 @@
         <option value="$PROJECT_DIR$/stories/templates/stories/story.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/category.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/contact.html" />
-        <option value="$PROJECT_DIR$/stories/views.py" />
         <option value="$PROJECT_DIR$/stories/templates/stories/login.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/register.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/base.html" />
         <option value="$PROJECT_DIR$/MyNews/settings.py" />
+        <option value="$PROJECT_DIR$/stories/views.py" />
       </list>
     </option>
   </component>
@@ -312,12 +313,12 @@
       <workItem from="1630961423325" duration="414000" />
       <workItem from="1630999095536" duration="20517000" />
       <workItem from="1631164943579" duration="1421000" />
-      <workItem from="1631167732715" duration="7081000" />
+      <workItem from="1631167732715" duration="7685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50181000" />
+    <option name="totallyTimeSpent" value="50785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,9 +331,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26675603" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26675603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -346,7 +346,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.23196605" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.23196605" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -740,8 +740,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stories/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="255" column="55" lean-forward="true" selection-start-line="255" selection-start-column="55" selection-end-line="255" selection-end-column="55" />
+        <state relative-caret-position="-299">
+          <caret line="223" selection-start-line="223" selection-end-line="223" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
