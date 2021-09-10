@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97580101-9fe2-4996-ad16-ab3b647feccf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="97580101-9fe2-4996-ad16-ab3b647feccf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +78,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stories/templates/stories/story.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="400">
+              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+              <folding>
+                <element signature="e#715#748#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,7 +111,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyNews/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="398">
@@ -180,7 +180,6 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/stories/templates/stories/index.html" />
-        <option value="$PROJECT_DIR$/stories/templates/stories/story.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/category.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/contact.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/login.html" />
@@ -188,6 +187,7 @@
         <option value="$PROJECT_DIR$/stories/views.py" />
         <option value="$PROJECT_DIR$/stories/templates/stories/base.html" />
         <option value="$PROJECT_DIR$/MyNews/settings.py" />
+        <option value="$PROJECT_DIR$/stories/templates/stories/story.html" />
       </list>
     </option>
   </component>
@@ -209,6 +209,24 @@
             <path>
               <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyNews" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyNews" type="462c0819:PsiDirectoryNode" />
+              <item name="stories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyNews" type="462c0819:PsiDirectoryNode" />
+              <item name="stories" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyNews" type="462c0819:PsiDirectoryNode" />
+              <item name="stories" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="stories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
@@ -286,12 +304,12 @@
       <workItem from="1630999095536" duration="20517000" />
       <workItem from="1631164943579" duration="1421000" />
       <workItem from="1631167732715" duration="11594000" />
-      <workItem from="1631260797852" duration="1509000" />
+      <workItem from="1631260797852" duration="1767000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56203000" />
+    <option name="totallyTimeSpent" value="56461000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -663,13 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stories/templates/stories/story.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -714,6 +725,16 @@
           <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="e#630#662#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stories/templates/stories/story.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding>
+            <element signature="e#715#748#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
