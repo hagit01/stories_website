@@ -85,7 +85,7 @@ def story(request, pk):
     stories = Story.objects.filter(category=story_select.category).order_by("-id")
 
     context = {'today': now, 'story': story_select, 'stories': stories, 'newest': newest,
-               'newest_4': newest_4, 'most_viewed_stories': most_viewed_stories}
+               'next_4_newest': next_4_newest, 'newest_4': newest_4, 'most_viewed_stories': most_viewed_stories}
     return render(request, "stories/story.html", context)
 
 
