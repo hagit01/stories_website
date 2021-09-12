@@ -120,7 +120,7 @@ def search(request):
 
 
 def contact(request):
-    result = '...'
+    result = ""
     newest = Story.objects.order_by("-id")[0]
     newest_stories = Story.objects.order_by("-id")[0:4]
     most_viewed_stories = Story.objects.order_by("-id")[3:6]
@@ -136,11 +136,18 @@ def contact(request):
             post.subject = form.cleaned_data['subject']
             post.message = form.cleaned_data['message']
             post.save()
-            result = "Thank you for your contact. We will answer you soon"
-    else:
-        form = FormContact()
 
-    context = {'today': now, 'newest': newest, 'newest_4': newest_4, 'most_viewed_stories': most_viewed_stories,
+            result = '''
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Your message has successfully sent.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            '''
+
+    context = {'today': now, 'newest': newest, 'newest_stories': newest_stories,
+               'newest_4': newest_4, 'most_viewed_stories': most_viewed_stories,
                'form': form, 'result': result}
 
     return render(request, 'stories/contact.html', context)
