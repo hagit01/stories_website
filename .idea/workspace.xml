@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97580101-9fe2-4996-ad16-ab3b647feccf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stories/templates/stories/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/stories/templates/stories/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stories/templates/stories/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/stories/templates/stories/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stories/templates/stories/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/stories/templates/stories/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,8 +140,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stories/templates/stories/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+            <state relative-caret-position="600">
+              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -320,12 +317,12 @@
       <workItem from="1631167732715" duration="11594000" />
       <workItem from="1631260797852" duration="17407000" />
       <workItem from="1631458377223" duration="4751000" />
-      <workItem from="1632076232009" duration="476000" />
+      <workItem from="1632076232009" duration="1271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77390000" />
+    <option name="totallyTimeSpent" value="78123000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -338,9 +335,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2774799" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2774799" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -354,7 +350,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.23196605" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.23196605" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -636,8 +632,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stories/templates/stories/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        <state relative-caret-position="600">
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
         </state>
       </provider>
     </entry>
