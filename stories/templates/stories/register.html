@@ -3,12 +3,6 @@
 
 {% block title %}stories - Register page{% endblock title %}
 
-{% block nav %}
-    <li class="nav-item mn">
-        <a class="nav-link" href="{% url 'stories:register.html'%}">Registration <span class="sr-only">(current)</span></a>
-    </li>
-{% endblock nav %}
-
 
 {% block content %}
 
@@ -34,8 +28,13 @@
                         </table>
                     </div>
                     <div class="col-12 py-3 text-center"><input type="submit" class="btn contact_btn" value="Register" ></div>
+                    <div class="col-12 py-3 text-center"><a href="{% url 'stories:register.html' %}" class="text-center">
+                        Don't have an account? Register now.</a>
+                    </div>
                 </form>
+
             </div>
+
         </div>
         <div class="row">
             <h6>{% if registered %}Your registration is successfully. {% endif %}</h6>

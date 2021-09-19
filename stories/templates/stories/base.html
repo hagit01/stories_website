@@ -103,9 +103,9 @@
                     <li class="nav-item mn">
                         <a class="nav-link" href="{% url 'stories:login.html' %}">Login<span class="sr-only">(current)</span></a>
                     </li>
-                    {% block nav %}
-
-                    {% endblock nav %}
+                    <li class="nav-item mn">
+                        <a class="nav-link" href="{% url 'stories:register.html'%}">Registration <span class="sr-only">(current)</span></a>
+                    </li>
                     {% endif %}
                 </ul>
             </div>
