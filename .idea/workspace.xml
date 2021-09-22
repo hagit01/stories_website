@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97580101-9fe2-4996-ad16-ab3b647feccf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stories/static/stories/images/story_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/stories/static/stories/images/story_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stories/templates/stories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/stories/templates/stories/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,16 +38,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stories/templates/stories/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3280">
-              <caret line="18" column="141" selection-start-line="18" selection-start-column="141" selection-end-line="18" selection-end-column="141" />
+            <state relative-caret-position="60">
+              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stories/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
@@ -128,11 +127,11 @@
         <option value="$PROJECT_DIR$/stories/templates/stories/register.html" />
         <option value="$PROJECT_DIR$/MyNews/settings.py" />
         <option value="$PROJECT_DIR$/stories/context_processors.py" />
-        <option value="$PROJECT_DIR$/stories/templates/stories/index.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/base.html" />
         <option value="$PROJECT_DIR$/stories/static/stories/css/style_1.css" />
         <option value="$PROJECT_DIR$/stories/templates/stories/story.html" />
         <option value="$PROJECT_DIR$/stories/views.py" />
+        <option value="$PROJECT_DIR$/stories/templates/stories/index.html" />
       </list>
     </option>
   </component>
@@ -260,12 +259,12 @@
       <workItem from="1632213287740" duration="152000" />
       <workItem from="1632243662654" duration="47000" />
       <workItem from="1632256957599" duration="2278000" />
-      <workItem from="1632322752418" duration="3780000" />
+      <workItem from="1632322752418" duration="4019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84656000" />
+    <option name="totallyTimeSpent" value="84895000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,20 +508,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stories/templates/stories/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3280">
-          <caret line="18" column="141" selection-start-line="18" selection-start-column="141" selection-end-line="18" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stories/templates/stories/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="125" column="98" selection-start-line="125" selection-start-column="98" selection-end-line="125" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyNews/asgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -583,6 +568,20 @@
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stories/templates/stories/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="125" column="98" selection-start-line="125" selection-start-column="98" selection-end-line="125" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stories/templates/stories/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
         </state>
       </provider>
     </entry>
