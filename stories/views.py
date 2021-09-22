@@ -24,13 +24,6 @@ from stories.serializers import StorySerializer
 
 now = datetime.datetime.now()
 today = date.today()
-d1 = today.strftime("%b. %d,%Y")
-
-story_list = Story.objects.order_by("-id")
-newest = story_list[0]
-next_4_newest = story_list[1:5]
-newest_4 = story_list[0:4]
-most_viewed_stories = story_list[3:6]
 
 
 def index(request):
@@ -44,10 +37,8 @@ def index(request):
     young_children = Story.objects.filter(category=1).order_by("-id")
     older_children = Story.objects.filter(category=2).order_by("-id")
 
-    context = {'today': now, 'd1': d1, 'newest': newest, 'next_4_newest': next_4_newest,
-                'newest_4': newest_4, 'young': young_children,
-                'older': older_children, 'most_viewed_stories': most_viewed_stories,
-                'visits': value, 'last_visit': last_visit}
+    context = {'young': young_children, 'older': older_children,
+               'visits': value, 'last_visit': last_visit}
     response = render(request, "stories/index.html", context)
 
     if value != 1:
@@ -75,33 +66,21 @@ def category(request, pk):
     except EmptyPage:
         stories = paginator.page(paginator.num_pages)
 
-    context = {'today': now, 'stories': stories, 'newest': newest, 'pk': pk,
-               'newest_4': newest_4, 'most_viewed_stories': most_viewed_stories}
+    context = {'stories': stories, 'pk': pk}
     return render(request, "stories/category.html", context)
 
 
 def story(request, pk):
     story_select = Story.objects.get(pk=pk)
-    stories = Story.objects.filter(category=story_select.category).order_by("-id")
+    other_story = Story.objects.all().exclude(id=pk)
 
-    context = {'today': now, 'story': story_select, 'stories': stories, 'newest': newest,
-               'next_4_newest': next_4_newest, 'newest_4': newest_4, 'most_viewed_stories': most_viewed_stories}
+    context = {'today': now, 'story': story_select, 'other_story': other_story}
     return render(request, "stories/story.html", context)
 
 
-# def contact(request):
-#     newest = Story.objects.order_by("-id")[0]
-#     newest_stories = Story.objects.order_by("-id")[0:4]
-#     most_viewed_stories = Story.objects.order_by("-id")[3:6]
-#     context = {'today':now, 'newest': newest, 'newest_stories': newest_stories,
-#               'most_viewed_stories': most_viewed_stories}
-#     return render(request, "stories/contact.html", context)
-    
-
 def search(request):
     global search_str
-    newest = Story.objects.order_by("-id")[0]
-    newest_4 = Story.objects.order_by("-id")[0:4]
+
     stories = []
     if request.method == 'GET':
         if request.GET.get('name'):
@@ -114,16 +93,12 @@ def search(request):
     for story in stories:
         story.content = re.sub('<[^<]*?>', '', story.content)
     numbers = len(stories)
-    context = {'today': now, 'newest': newest, 'stories': stories, 'newest_4': newest_4,
-               'most_viewed_stories': most_viewed_stories, 'numbers': numbers, 'search_str': search_str}
+    context = {'numbers': numbers, 'search_str': search_str, 'stories': stories}
     return render(request, 'stories/search.html', context)
 
 
 def contact(request):
     result = ""
-    newest = Story.objects.order_by("-id")[0]
-    newest_stories = Story.objects.order_by("-id")[0:4]
-    most_viewed_stories = Story.objects.order_by("-id")[3:6]
     form = FormContact()
     if request.method == 'POST':
         form = FormContact(request.POST, Contact)
@@ -146,15 +121,12 @@ def contact(request):
             </div>
             '''
 
-    context = {'today': now, 'newest': newest, 'newest_stories': newest_stories,
-               'newest_4': newest_4, 'most_viewed_stories': most_viewed_stories,
-               'form': form, 'result': result}
+    context = {'form': form, 'result': result}
 
     return render(request, 'stories/contact.html', context)
 
 
 def register(request):
-    newest = Story.objects.order_by("-id")[0]
     registered = False
     if request.method == "POST":
         form_user = UserForm(data=request.POST)
@@ -175,13 +147,11 @@ def register(request):
     else:
         form_user = UserForm()
         form_por = UserProfileInfoForm()
-    context = {'user_form': form_user, 'profile_form': form_por, 'newest': newest, 'newest_4': newest_4, 'registered': registered, 'today': now}
+    context = {'user_form': form_user, 'profile_form': form_por, 'registered': registered}
     return render(request, 'stories/register.html', context)
 
 
 def user_login(request):
-    now = datetime.datetime.now()
-    newest = Story.objects.order_by("-id")[0]
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -196,37 +166,18 @@ def user_login(request):
             print("You can't login.")
             print("Username: {} and password: {}".format(username, password))
             login_result = "Username or password is incorrect!"
-            return render(request, 'stories/login.html', {'login_result': login_result, 'today': now, 'newest': newest})
+            return render(request, 'stories/login.html', {'login_result': login_result})
     else:
-        return render(request, 'stories/login.html', {'today': now, 'newest': newest})
+        return render(request, 'stories/login.html')
 
 
 @login_required
 def user_logout(request):
-    now = datetime.datetime.now()
-    newest = Story.objects.order_by("-id")[0]
     logout(request)
     result = "You're logged out. You can login again."
-    context = {'logout_result': result, 'today': now, 'newest': newest}
+    context = {'logout_result': result,}
     return redirect('/')
     return render(request, 'stories/login.html', context)
-
-
-# @login_required
-# def subscribe(request):
-#     now = datetime.datetime.now()
-#     username = request.session.get('username', 0)
-#     if request.method == 'POST':
-#         email_address = request.POST.get('email')
-#         subject = 'Welcome to Stories for Children website'
-#         message = 'Hope you are enjoying your stories!'
-#         recepient = str(email_address)
-#         send_mail(subject, message, EMAIL_HOST_USER, [recepient], fail_silently=False)
-#         result = 'Our email was sent to your mail box. Thank you. '
-#
-#         return render(request, 'stories/base.html', {'today': now, 'username': username, 'result': result})
-#
-#     return render(request, 'stories/base.html', {'today': now, 'username': username})
 
 
 def subscribe(request):
@@ -248,23 +199,17 @@ def subscribe(request):
         msg.send()
         result = 'Thank you, our email was sent to your mail box.'
 
-        return render(request, 'stories/base.html', {'today': now, 'username': username, 'result': result})
+        return render(request, 'stories/base.html', {'username': username, 'result': result})
 
-    return render(request, 'stories/base.html', {'today': now, 'username': username,
-                                                 'most_viewed_stories': most_viewed_stories,
-                                                 'newest': newest, 'newest_4': newest_4})
+    return render(request, 'stories/base.html', {'username': username})
 
 
 def read_feeds(request):
-    newest = Story.objects.order_by("-id")[0]
     news_feed = feedparser.parse('http://feeds.feedburner.com/bedtimeshortstories/LYCF')
     entry = news_feed.entries
 
-    now = datetime.datetime.now()
     username = request.session.get('last_visit', False)
-    return render(request, 'stories/feeds.html', {'today': now, 'username': username, 'feeds': entry,
-                                                  'most_viewed_stories': most_viewed_stories,
-                                                  'newest': newest, 'newest_4': newest_4})
+    return render(request, 'stories/feeds.html', {'username': username, 'feeds': entry})
 
 
 def stories_service(request):
