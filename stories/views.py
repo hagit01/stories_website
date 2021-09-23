@@ -1,7 +1,7 @@
 import datetime
 from datetime import date
 from django.shortcuts import render, redirect
-from .models import Category, Story, Contact
+from .models import Category, Story, Contact, User, UserProfileInfo
 from django.http import HttpResponse
 import re
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -128,26 +128,50 @@ def contact(request):
 
 def register(request):
     registered = False
+    register_msg = ''
     if request.method == "POST":
-        form_user = UserForm(data=request.POST)
-        form_por = UserProfileInfoForm(data=request.POST)
-        if form_user.is_valid() and form_por.is_valid() and form_user.cleaned_data['password'] == form_user.cleaned_data['confirm']:
-            user = form_user.save()
-            user.set_password(user.password)
-            user.save()
-            profile = form_por.save(commit=False)
-            profile.user = user
-            if 'image' in request.FILES:
-                profile.image = request.FILES['image']
-            profile.save()
-            registered = True
-        if form_user.cleaned_data['password'] != form_user.cleaned_data['confirm']:
-            form_user.add_error('confirm', 'The passwords do not match')
-            print(form_user.error, form_por.errors)
+        user_form = UserForm(data=request.POST)
+        profile_form = UserProfileInfoForm(request.POST, request.FILES)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            if user_form.cleaned_data['password'] == user_form.cleaned_data['confirm']:
+                user = user_form.save()
+                print(user)
+                user.set_password(user.password)
+                user.save()
+
+                profile = profile_form.save(commit=False)
+                profile.user = user
+                if 'image' in request.FILES:
+                    profile.image = request.FILES['image']
+                profile.save()
+                registered = True
+                register_msg = '''
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Successfully register! <a href="/login.html" class="alert-link">Login here.</a>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                '''
+                user_form = UserForm()
+                profile_form = UserProfileInfoForm()
+        else:
+            register_msg = '''
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    Register Fail!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            '''
     else:
-        form_user = UserForm()
-        form_por = UserProfileInfoForm()
-    context = {'user_form': form_user, 'profile_form': form_por, 'registered': registered}
+        user_form = UserForm()
+        profile_form = UserProfileInfoForm()
+
+    context = {'user_form': user_form, 'profile_form': profile_form,
+               'registered': registered, 'register_msg': register_msg}
+
     return render(request, 'stories/register.html', context)
 
 

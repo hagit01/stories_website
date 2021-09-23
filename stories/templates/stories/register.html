@@ -6,39 +6,61 @@
 
 {% block content %}
 
-<div class="container-fluid mb-4">
-    <div class="container">
-        <div class="row">
-            <div>
-                <div class="text-center fh5co_heading py-2">Registration Form</div>
-            </div>
-            <div class="col-12 col-md-6 align-self-center">
-                <form class="row" id="fh5co_contact_form" action="{% url 'stories:register.html' %}" method="POST">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="container">
+                <form enctype="multipart/form-data" method="POST" autocomplete="off">
                     {% csrf_token %}
-                    <div class="col-6 py-3 text-center">
-                        <table class="table">
-                            <tr>
-                                <td></td>
-                                <td>{{ user_form.as_table }}</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>{{ profile_form.as_table }}</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col-12 py-3 text-center"><input type="submit" class="btn contact_btn" value="Register" ></div>
-                    <div class="col-12 py-3 text-center"><a href="{% url 'stories:login.html' %}" class="text-center">
-                        Already have an account? Login here.</a>
+                    <div class="row">
+                        <div class="col-md-12 mt-2">
+                            {% if registered %}{{ register_msg|safe }}{% endif %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>{{ user_form.username.label }} <small>(<strong>*</strong>)</small></label>
+                            {{ user_form.username }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>{{ user_form.email.label }} <small>(<strong>*</strong>)</small></label>
+                            {{ user_form.email }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>{{ user_form.password.label }} <small>(<strong>*</strong>)</small></label>
+                            {{ user_form.password }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>{{ user_form.confirm.label }} <small>(<strong>*</strong>)</small></label>
+                            {{ user_form.confirm }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>{{ profile_form.portfolio.label }}</label>
+                            {{ profile_form.portfolio }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>{{ profile_form.image.label }}</label>
+                            <div class="text-center mt-2">
+                                {{ profile_form.image }}
+                            </div>
+                        </div>
+                        <div class="small col-md-12 pl-3">(<strong>*</strong>): Required Field</div>
+                        <div class="mt-3 col-md-12 text-center">
+                            <button type="submit" class="btn contact_btn">Register</button>
+                        </div>
+                        <div class="mt-3 col-md-12 text-center">
+                            <a href="{% url 'stories:login.html' %}">
+                                Already have an account? Login here.</a>
+                        </div>
                     </div>
                 </form>
 
-            </div>
 
+            </div>
         </div>
-        <div class="row">
-            <h6>{% if registered %}Your registration is successfully. {% endif %}</h6>
+
+        <div class="col-md-4 d-none d-md-flex">
+            <div class="container bg-register"></div>
         </div>
+
     </div>
 </div>
 

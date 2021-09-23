@@ -33,19 +33,33 @@ class FormContact(forms.ModelForm):
 
 
 class UserForm(forms.ModelForm):
-    password = forms.CharField(max_length=150, label='Password', widget=forms.PasswordInput())
+    username = forms.CharField(max_length=100, label='Username', widget=forms.TextInput(attrs={
+        'class': 'form-control',
+    }))
 
-    confirm = forms.CharField(max_length=150, label='Confirm', widget=forms.PasswordInput())
+    email = forms.EmailField(max_length=100, label='E-mail', widget=forms.EmailInput(attrs={
+        'class': 'form-control',
+    }))
+
+    password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={
+        'class': 'form-control',
+    }))
+
+    confirm = forms.CharField(label='Confirm password', widget=forms.PasswordInput(attrs={
+        'class': 'form-control',
+    }))
 
     class Meta:
         model = User
-        fields = 'username', 'email', 'password', 'confirm',
+        fields = ('username', 'email', 'password', 'confirm')
 
 
 class UserProfileInfoForm(forms.ModelForm):
-    image = forms.ImageField(required=False)
+    image = forms.ImageField(required=False, label='Avatar image')
+    portfolio = forms.CharField(label='Portfolio', widget=forms.TextInput(attrs={
+        'class': 'form-control',
+    }))
 
     class Meta:
         model = UserProfileInfo
-        exclude = ('user', )
-        # fields = '__all__'
+        exclude = ('user',)

@@ -3,46 +3,47 @@
 
 {% block title %}Login{% endblock title %}
 
+
+
 {% block content %}
 
-<div class="container">
-    <div class="row">
-        <div>
-            <div class="text-center fh5co_heading py-2">Login Form</div>
-        </div>
-        <div class="col-12 col-md-6 align-self-center">
-            <form class="row" id="fh5co_contact_form" action="{% url 'stories:login.html' %}" method="POST">
-                {% csrf_token %}
-                <div class="col-6 py-3 text-center">
-                    <table class="table">
-                        <tr>
-                            <td></td>
-                            <td> <input name="username" type="text" class="fh5co_contact_text_box"
-                                placeholder="Enter username" /></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><input name="password" type="password" class="fh5co_contact_text_box"
-                                placeholder="Enter password"/></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><input type="submit" class="btn contact_btn" value="Login" /></td>
+<div class="container mb-5">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <div class="container">
 
-                        </tr>
-
-                    </table>
-                    <div><a href="{% url 'stories:register.html' %}" >
-                        Don't have an account? Register now.</a>
+                <form action="{% url 'stories:login.html' %}" method="POST" autocomplete="off">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label style="font-size: 18px;">Username</label>
+                            <input name="username" type="text" class="form-control fh5co_contact_text_box"
+                                   placeholder="Enter username" />
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label style="font-size: 18px">Password</label>
+                            <input name="password" type="password" class="form-control fh5co_contact_text_box"
+                                   placeholder="Enter password"/>
+                        </div>
+                        <div class="form-group col-md-12 mt-3 text-center">
+                            <input type="submit" class="btn contact_btn" style="width:150px" value="Login" />
+                        </div>
+                        <div class="form-group col-md-12 mt-3 text-center"><a href="{% url 'stories:register.html' %}" >
+                            Don't have an account? Register now.</a>
+                        </div>
                     </div>
+                </form>
+                <div class="row">
+                    <h6 class="text-center">{% if login_result %}{{ login_result }}{% endif %}</h6>
+                    <h6 class="text-center">{% if logout_result %}{{ logout_result }}{% endif %}</h6>
                 </div>
-            </form>
+            </div>
         </div>
+
+        <div class="col-md-8 d-none d-md-flex bg-login"></div>
+
     </div>
-    <div class="row">
-        <h6>{% if login_result %}{{ login_result }}{% endif %}</h6>
-        <h6>{% if logout_result %}{{ logout_result }}{% endif %}</h6>
-    </div>
+
 </div>
 
 {% endblock content %}
