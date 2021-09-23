@@ -41,7 +41,7 @@ class UserProfileInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     # Add any more attribute you want
     portfolio = models.URLField(blank=True, null=True)
-    image = models.ImageField(upload_to="stories/images/", default="stories/images/people_default.png", null=True
+    image = models.ImageField(upload_to="stories/images/", default="stories/images/people_default.png", null=True)
 
     def __str__(self):
         return self.user.username

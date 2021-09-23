@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97580101-9fe2-4996-ad16-ab3b647feccf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stories/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/stories/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stories/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/stories/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stories/templates/stories/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/stories/templates/stories/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stories/templates/stories/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/stories/templates/stories/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stories/templates/stories/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/stories/templates/stories/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stories/templates/stories/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/stories/templates/stories/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stories/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stories/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="97580101-9fe2-4996-ad16-ab3b647feccf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,13 +74,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stories/templates/stories/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3599">
+            <state relative-caret-position="200">
               <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyNews/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-945">
+              <caret line="69" column="61" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
+              <folding>
+                <element signature="e#306#315#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stories/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="155">
@@ -114,23 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyNews/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="e#630#662#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stories/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
-              <caret line="43" column="113" selection-start-line="43" selection-start-column="113" selection-end-line="43" selection-end-column="113" />
+            <state relative-caret-position="375">
+              <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -172,12 +162,12 @@
         <option value="$PROJECT_DIR$/stories/templates/stories/search.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/story.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/base.html" />
-        <option value="$PROJECT_DIR$/stories/models.py" />
         <option value="$PROJECT_DIR$/stories/forms.py" />
         <option value="$PROJECT_DIR$/stories/templates/stories/register.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/login.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/contact.html" />
         <option value="$PROJECT_DIR$/stories/views.py" />
+        <option value="$PROJECT_DIR$/stories/models.py" />
       </list>
     </option>
   </component>
@@ -199,6 +189,24 @@
             <path>
               <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyNews" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyNews" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyNews" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="stories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyNews" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="stories" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
@@ -306,12 +314,12 @@
       <workItem from="1632256957599" duration="2278000" />
       <workItem from="1632322752418" duration="9058000" />
       <workItem from="1632340180760" duration="7043000" />
-      <workItem from="1632383634068" duration="20390000" />
+      <workItem from="1632383634068" duration="20789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117367000" />
+    <option name="totallyTimeSpent" value="117766000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -323,7 +331,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23324397" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -353,7 +361,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stories/migrations/0002_story_image.py" />
     <entry file="das://e8457fe6-d6f5-4249-97c7-c2ca12645e49/schema/main/table/stories_story" />
     <entry file="das://e8457fe6-d6f5-4249-97c7-c2ca12645e49/schema/main/table/sqlite_master" />
     <entry file="das://e8457fe6-d6f5-4249-97c7-c2ca12645e49/schema/main/table/django_session" />
@@ -492,16 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyNews/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="69" column="61" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
-          <folding>
-            <element signature="e#306#315#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stories/context_processors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -547,13 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stories/templates/stories/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3599">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyNews/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -568,16 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1555">
           <caret line="388" column="6" selection-start-line="388" selection-start-column="6" selection-end-line="388" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stories/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="43" column="113" selection-start-line="43" selection-start-column="113" selection-end-line="43" selection-end-column="113" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -633,6 +613,36 @@
           <caret line="157" column="52" lean-forward="true" selection-start-line="157" selection-start-column="52" selection-end-line="157" selection-end-column="52" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stories/templates/stories/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyNews/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-945">
+          <caret line="69" column="61" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
+          <folding>
+            <element signature="e#306#315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/stories/images/10-1-1-875x500.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stories/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
