@@ -1,7 +1,6 @@
 from django import forms
 from . import models
 from .models import Contact, UserProfileInfo
-from django.core.validators import RegexValidator
 from django.contrib.auth.models import User
 
 
