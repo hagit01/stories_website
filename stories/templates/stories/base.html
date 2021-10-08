@@ -57,12 +57,7 @@
             </div>
             
             <div class="col-12 col-md-9 align-self-center fh5co_mediya_right">
-            {% comment %}
-                <div class="text-center d-inline-block">
-                    <a class="fh5co_display_table"><div class="fh5co_verticle_middle"><i class="fa fa-search"></i></div></a>
-                </div>	
-            {% endcomment %}
-                
+
 				<div class="text-center d-inline-block ml-auto">
                     <a style="font-size: 16px">  {{today}} </a>
                 </div>
@@ -162,19 +157,9 @@
                 <a href="{% url 'stories:story.html' story.id %}" class="footer_post pb-4"> {{ story.name }} </a>
                 {% endfor %}
 
-                {% comment %} <div class="footer_makes_sub_font"> Dec 31, 2016</div>
-                <a href="#" class="footer_post pb-4"> First Story </a>
-                <div class="footer_makes_sub_font"> Dec 31, 2016</div>
-                <a href="#" class="footer_post pb-4"> Second Story </a>
-                <div class="footer_makes_sub_font"> Dec 31, 2016</div>
-                <a href="#" class="footer_post pb-4"> Third Story </a>    {% endcomment %}
             </div>
             <div class="col-12 col-md-12 col-lg-4 ">
                 <div class="footer_main_title py-3"> Newest Stories</div>
-                {% comment %} <a href="#" class="footer_img_post_6"><img src='{% static "stories/images/allef-vinicius-108153.jpg"%}' alt="img"/></a>
-                <a href="#" class="footer_img_post_6"><img src='{% static "stories/images/32-450x260.jpg"%}' alt="img"/></a>
-                <a href="#" class="footer_img_post_6"><img src='{% static "stories/images/download (1).jpg"%}' alt="img"/></a>
-                <a href="#" class="footer_img_post_6"><img src='{% static "stories/images/science-578x362.jpg"%}' alt="img"/></a> {% endcomment %}
                 {% for story in newest_4 %}
                     <a href="{% url 'stories:story.html' story.id %}" class="footer_img_post_6"><img src='{{ story.image.url }}' alt="story.name"/></a>
                 {% endfor %}
