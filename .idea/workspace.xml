@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97580101-9fe2-4996-ad16-ab3b647feccf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/stories/images/It_Could_Happen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/stories/css/style_1.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/stories/css/style_1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stories/static/stories/css/style_1.css" beforeDir="false" afterPath="$PROJECT_DIR$/stories/static/stories/css/style_1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stories/static/stories/sass/style_1.scss" beforeDir="false" afterPath="$PROJECT_DIR$/stories/static/stories/sass/style_1.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stories/templates/stories/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/stories/templates/stories/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stories/templates/stories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/stories/templates/stories/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stories/templates/stories/story.html" beforeDir="false" afterPath="$PROJECT_DIR$/stories/templates/stories/story.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,18 +36,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stories/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="20">
@@ -56,8 +47,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stories/templates/stories/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="940">
-              <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+            <state relative-caret-position="340">
+              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,11 +68,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stories/templates/stories/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+            <state relative-caret-position="580">
+              <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/staticfiles/stories/css/style_1.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stories/static/stories/sass/style_1.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="370" selection-start-line="370" selection-end-line="370" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stories/static/stories/css/style_1.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -96,6 +117,15 @@
               <folding>
                 <element signature="e#306#315#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stories/templates/stories/story.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -125,11 +155,9 @@
         <option value="$PROJECT_DIR$/MyNews/__init__.py" />
         <option value="$PROJECT_DIR$/runtime.txt" />
         <option value="$PROJECT_DIR$/stories/context_processors.py" />
-        <option value="$PROJECT_DIR$/stories/static/stories/css/style_1.css" />
         <option value="$PROJECT_DIR$/stories/templates/stories/category.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/feeds.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/search.html" />
-        <option value="$PROJECT_DIR$/stories/templates/stories/story.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/login.html" />
         <option value="$PROJECT_DIR$/stories/views.py" />
         <option value="$PROJECT_DIR$/stories/models.py" />
@@ -143,8 +171,12 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/venv/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/stories/templates/stories/base.html" />
         <option value="$PROJECT_DIR$/stories/templates/stories/index.html" />
+        <option value="$PROJECT_DIR$/staticfiles/stories/css/style_1.css" />
+        <option value="$PROJECT_DIR$/stories/static/stories/sass/style_1.scss" />
+        <option value="$PROJECT_DIR$/stories/static/stories/css/style_1.css" />
+        <option value="$PROJECT_DIR$/stories/templates/stories/base.html" />
+        <option value="$PROJECT_DIR$/stories/templates/stories/story.html" />
       </list>
     </option>
   </component>
@@ -170,30 +202,20 @@
             <path>
               <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyNews" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyNews" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
               <item name="stories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyNews" type="462c0819:PsiDirectoryNode" />
-              <item name="media" type="462c0819:PsiDirectoryNode" />
               <item name="stories" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyNews" type="462c0819:PsiDirectoryNode" />
-              <item name="MyNews" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyNews" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyNews" type="462c0819:PsiDirectoryNode" />
-              <item name="staticfiles" type="462c0819:PsiDirectoryNode" />
+              <item name="stories" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="stories" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -284,12 +306,12 @@
       <workItem from="1633461195656" duration="1096000" />
       <workItem from="1633624307718" duration="3990000" />
       <workItem from="1633698273947" duration="626000" />
-      <workItem from="1633703670825" duration="1307000" />
+      <workItem from="1633703670825" duration="2587000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129456000" />
+    <option name="totallyTimeSpent" value="130736000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -303,7 +325,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26675603" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26675603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -317,7 +339,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.23196605" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.23196605" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -331,8 +353,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://e8457fe6-d6f5-4249-97c7-c2ca12645e49/schema/main/table/auth_group_permissions" />
-    <entry file="file://$PROJECT_DIR$/stories/migrations/0001_initial.py" />
     <entry file="das://e8457fe6-d6f5-4249-97c7-c2ca12645e49/schema/main/table/stories_category" />
     <entry file="das://e8457fe6-d6f5-4249-97c7-c2ca12645e49/schema/main/table/sqlite_sequence" />
     <entry file="das://e8457fe6-d6f5-4249-97c7-c2ca12645e49/schema/main/table/auth_group" />
@@ -424,13 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stories/static/stories/css/style_1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stories/context_processors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -445,13 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stories/templates/stories/story.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -509,13 +515,6 @@
           <folding>
             <element signature="e#222#231#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stories/static/stories/sass/style_1.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1643">
-          <caret line="680" column="1" selection-start-line="680" selection-start-column="1" selection-end-line="680" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -609,16 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyNews/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-          <folding>
-            <element signature="e#306#315#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stories/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3115">
@@ -635,17 +624,61 @@
     <entry file="file://$PROJECT_DIR$/media/stories/images/It_could.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/stories/templates/stories/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/media/stories/images/It_Could_Happen.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/stories/templates/stories/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+        <state relative-caret-position="580">
+          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/staticfiles/stories/css/style_1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stories/static/stories/sass/style_1.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="370" selection-start-line="370" selection-end-line="370" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stories/static/stories/css/style_1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyNews/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+          <folding>
+            <element signature="e#306#315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stories/templates/stories/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stories/templates/stories/story.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
